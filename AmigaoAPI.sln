@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI", "AmigaoAPI\AmigaoAPI.csproj", "{CE941647-A24E-4175-89E4-0FB72A7B928E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI.Domain", "AmigaoAPI.Domain\AmigaoAPI.Domain.csproj", "{E5014544-CEFB-4631-9D14-C5AB1FF37607}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI.Infra.Data", "AmigaoAPI.Infra.Data\AmigaoAPI.Infra.Data.csproj", "{66E0288F-AC37-4245-A0EB-E366BEA23033}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI.Infra.IoC", "Amig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI.Application", "AmigaoAPI.Application\AmigaoAPI.Application.csproj", "{24EC3693-2549-42AD-90CB-FEAAF71F8DE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigaoAPI.API", "AmigaoAPI.API\AmigaoAPI.API.csproj", "{9B87A744-71A2-4AB5-8149-C22A715B1E69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CE941647-A24E-4175-89E4-0FB72A7B928E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE941647-A24E-4175-89E4-0FB72A7B928E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE941647-A24E-4175-89E4-0FB72A7B928E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE941647-A24E-4175-89E4-0FB72A7B928E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5014544-CEFB-4631-9D14-C5AB1FF37607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E5014544-CEFB-4631-9D14-C5AB1FF37607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5014544-CEFB-4631-9D14-C5AB1FF37607}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{24EC3693-2549-42AD-90CB-FEAAF71F8DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24EC3693-2549-42AD-90CB-FEAAF71F8DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24EC3693-2549-42AD-90CB-FEAAF71F8DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B87A744-71A2-4AB5-8149-C22A715B1E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B87A744-71A2-4AB5-8149-C22A715B1E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B87A744-71A2-4AB5-8149-C22A715B1E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B87A744-71A2-4AB5-8149-C22A715B1E69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
