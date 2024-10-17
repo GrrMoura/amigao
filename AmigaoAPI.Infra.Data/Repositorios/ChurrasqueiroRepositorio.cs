@@ -8,5 +8,6 @@ namespace AmigaoAPI.Infra.Data.Repositorios
 {
     internal class ChurrasqueiroRepositorio
     {
+        //´lplp
     }
 }
