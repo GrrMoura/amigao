@@ -1,0 +1,6 @@
+@AmigaoAPI.API_HostAddress = http://localhost:5145
+
+GET {{AmigaoAPI.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
