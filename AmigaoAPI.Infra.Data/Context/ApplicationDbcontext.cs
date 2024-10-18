@@ -1,14 +1,11 @@
-﻿using AmigaoAPI.Domain.Modelos;
+using AmigaoAPI.Domain.Modelos;
 using AmigaoAPI.Infra.Data.Maps;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AmigaoAPI.Infra.Data.Context
 {
+
     public class ApplicationDbContext : DbContext // a classe ApplicationDBcontext herda de DBContext que vem do EntityFramework Core
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -35,5 +32,5 @@ namespace AmigaoAPI.Infra.Data.Context
 
 
         }
-    }
+ 
 }

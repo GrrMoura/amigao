@@ -1,14 +1,13 @@
-﻿using AmigaoAPI.Domain.Modelos;
+
+using AmigaoAPI.Domain.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AmigaoAPI.Infra.Data.Maps
 {
+
     public class ReservaMap : IEntityTypeConfiguration<Reserva>
     {
         public void Configure(EntityTypeBuilder<Reserva> builder)
@@ -27,5 +26,5 @@ namespace AmigaoAPI.Infra.Data.Maps
                 .WithMany(u => u.Reservas)
                 .HasForeignKey(r => r.IdUsuario);
         }
-    }
+   
 }

@@ -1,11 +1,8 @@
-﻿using AmigaoAPI.Domain.Modelos;
+
+using AmigaoAPI.Domain.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AmigaoAPI.Infra.Data.Maps
 {
@@ -20,5 +17,6 @@ namespace AmigaoAPI.Infra.Data.Maps
                    .HasColumnName("funcionario_id")// mudando o nome da coluna
                    .UseIdentityColumn(); // dizendo para o banco que vai gerar ids automaticado
         }
-    }
+
+   
 }

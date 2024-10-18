@@ -1,14 +1,13 @@
-﻿using AmigaoAPI.Domain.Modelos;
+
+using AmigaoAPI.Domain.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AmigaoAPI.Infra.Data.Maps
 {
+
     public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
@@ -25,5 +24,6 @@ namespace AmigaoAPI.Infra.Data.Maps
                 .WithOne(r => r.Usuario)
                 .HasForeignKey(r => r.IdUsuario);
         }
+
     }
-}
+
