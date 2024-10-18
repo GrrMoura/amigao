@@ -1,12 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using AmigaoAPI.Domain.Modelos;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+
 
 namespace AmigaoAPI.Infra.Data.Maps
 {
-    internal class UsuarioMAp
+
+    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
+        public void Configure(EntityTypeBuilder<Usuario> builder)
+        {
+            builder.ToTable("Usuarios");
+
+            builder.HasKey(u => u.Id);
+            builder.Property(u => u.Nome).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.Email).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.PasswordHash).IsRequired();
+            builder.Property(u => u.TipoUsuario).IsRequired();
+
+            builder.HasMany(u => u.Reservas)
+                .WithOne(r => r.Usuario)
+                .HasForeignKey(r => r.IdUsuario);
+        }
+
     }
-}
+
