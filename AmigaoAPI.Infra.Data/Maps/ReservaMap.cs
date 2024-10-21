@@ -26,5 +26,6 @@ namespace AmigaoAPI.Infra.Data.Maps
                 .WithMany(u => u.Reservas)
                 .HasForeignKey(r => r.IdUsuario);
         }
-   
+
+    }
 }
