@@ -16,6 +16,7 @@ namespace AmigaoAPI.Infra.Data.Context
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<AvaliacaoChurrasqueiro> AvaliacaoChurrasqueiros { get; set; }
+        public DbSet<Divulgacao> Divulgacoes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) // aqui é onde modela as tabelas para criar no banco, 
                                                                            // por exemplo eu quero que o atributo id ,
@@ -32,5 +33,6 @@ namespace AmigaoAPI.Infra.Data.Context
 
 
         }
- 
+
+    }
 }

@@ -26,4 +26,5 @@ namespace AmigaoAPI.Infra.Data.Maps
         }
 
     }
+}
 
