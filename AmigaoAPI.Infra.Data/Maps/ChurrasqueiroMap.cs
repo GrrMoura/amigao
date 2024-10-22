@@ -17,5 +17,6 @@ namespace AmigaoAPI.Infra.Data.Maps
                    .UseIdentityColumn(); // dizendo para o banco que vai gerar ids automaticado
         }
 
+
     }
 }
