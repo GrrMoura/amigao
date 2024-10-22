@@ -1,14 +1,12 @@
-﻿using AmigaoAPI.Domain.Modelos;
+﻿using AmigaoAPI.Application.DTO;
+using AmigaoAPI.Application.Services.Interface;
+using AmigaoAPI.Domain.Modelos;
 using AmigaoAPI.Domain.Repositorios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AmigaoAPI.Domain.Services;
 
 namespace AmigaoAPI.Application.Services
 {
-    public class ChurrasqueiroService
+    public class ChurrasqueiroService : IChurrasqueiroService
     {
         private readonly IChurrasqueiroRepositorio _churrasqueiroRepositorio;
 
@@ -30,6 +28,56 @@ namespace AmigaoAPI.Application.Services
         public async Task<IEnumerable<Churrasqueiro>> ListarChurrasqueirosDisponiveisAsync()
         {
             return await _churrasqueiroRepositorio.ListarChurrasqueirosDisponiveisAsync();
+        }
+
+        Task<ResultService<bool>> IChurrasqueiroService.AtualizarDisponibilidadeAsync(int id, bool disponibilidade)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<bool>> IChurrasqueiroService.AtualizarPrecoPorHoraAsync(int id, decimal novoPreco)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.CreateAsync(ChurrasqueiroDTO churrasqueiroDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.CriarChurrasqueiroAsync(Churrasqueiro churrasqueiro)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<List<Churrasqueiro>>> IChurrasqueiroService.ListarChurrasqueirosDisponiveisAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.ObterPorIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Churrasqueiro>> IChurrasqueiroService.UpdateAsync(ChurrasqueiroDTO churrasqueiroDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

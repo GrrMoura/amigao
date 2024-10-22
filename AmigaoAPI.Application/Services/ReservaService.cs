@@ -1,14 +1,12 @@
-﻿using AmigaoAPI.Domain.Modelos;
+﻿using AmigaoAPI.Application.DTO;
+using AmigaoAPI.Application.Services.Interface;
+using AmigaoAPI.Domain.Modelos;
 using AmigaoAPI.Domain.Repositorios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AmigaoAPI.Domain.Services;
 
 namespace AmigaoAPI.Application.Services
 {
-    public class ReservaService
+    public class ReservaService : IReservaService
     {
         private readonly IReservaRepositorio _reservaRepositorio;
 
@@ -30,6 +28,51 @@ namespace AmigaoAPI.Application.Services
         public async Task<IEnumerable<Reserva>> ListarReservasPendentesAsync(int churrasqueiroId)
         {
             return await _reservaRepositorio.ListarReservasPendentesAsync(churrasqueiroId);
+        }
+
+        Task<ResultService<bool>> IReservaService.CancelarReservaAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.ConfirmarContratacaoAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.CreateAsync(ReservaDTO reservaDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.CriarReservaAsync(Reserva reserva)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<List<Reserva>>> IReservaService.ListarReservasPendentesAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Reserva>> IReservaService.UpdateAsync(ReservaDTO reservaDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

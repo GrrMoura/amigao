@@ -2,7 +2,6 @@
 using AmigaoAPI.Domain.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
 
 
 namespace AmigaoAPI.Infra.Data.Maps
@@ -27,4 +26,6 @@ namespace AmigaoAPI.Infra.Data.Maps
 
     }
 }
+
+
 
