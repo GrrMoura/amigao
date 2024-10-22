@@ -83,5 +83,5 @@ namespace AmigaoAPI.Infra.Data.Repositorios
             throw new NotImplementedException();
         }
 
-   
+    }  
 }

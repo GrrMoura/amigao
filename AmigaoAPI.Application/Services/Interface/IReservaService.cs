@@ -1,17 +1,19 @@
-﻿using AmigaoAPI.Domain.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AmigaoAPI.Application.DTO;
+using AmigaoAPI.Domain.Modelos;
+using AmigaoAPI.Domain.Services;
 
 namespace AmigaoAPI.Application.Services.Interface
 {
     public interface IReservaService
     {
-        Task<Reserva> CriarReservaAsync(Reserva reserva);
-        Task<bool> CancelarReservaAsync(int id);
-        Task<List<Reserva>> ListarReservasPendentesAsync();
-        Task<Reserva> ConfirmarContratacaoAsync(int id);
+        Task<ResultService<Reserva>> CriarReservaAsync(Reserva reserva);
+        Task<ResultService<bool>> CancelarReservaAsync(int id);
+        Task<ResultService<List<Reserva>>> ListarReservasPendentesAsync();
+        Task<ResultService<Reserva>> ConfirmarContratacaoAsync(int id);
+        Task<ResultService<Reserva>> UpdateAsync(ReservaDTO reservaDto);
+        Task<ResultService<Reserva>> DeleteAsync(int id);
+        Task<ResultService<Reserva>> CreateAsync(ReservaDTO reservaDto);
+        Task<ResultService<Reserva>> GetAllAsync();
+        Task<ResultService<Reserva>> GetByIdAsync(int id);
     }
 }

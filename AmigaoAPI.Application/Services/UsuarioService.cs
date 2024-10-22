@@ -1,14 +1,12 @@
-﻿using AmigaoAPI.Domain.Modelos;
+﻿using AmigaoAPI.Application.DTO;
+using AmigaoAPI.Application.Services.Interface;
+using AmigaoAPI.Domain.Modelos;
 using AmigaoAPI.Domain.Repositorios;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AmigaoAPI.Domain.Services;
 
 namespace AmigaoAPI.Application.Services
 {
-    public class UsuarioService
+    public class UsuarioService : IUsuarioService
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
 
@@ -30,6 +28,51 @@ namespace AmigaoAPI.Application.Services
         public async Task<bool> AutenticarAsync(string email, string senha)
         {
             return await _usuarioRepositorio.AutenticarAsync(email, senha);
+        }
+
+        Task<ResultService<Usuario>> IUsuarioService.CriarUsuarioAsync(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Usuario>> IUsuarioService.AutenticarAsync(string email, string senha)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Usuario>> IUsuarioService.AtualizarPerfilAsync(Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<bool>> IUsuarioService.VerificarDisponibilidadeEmailAsync(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<UsuarioDTO>> IUsuarioService.CreateAsync(UsuarioDTO tituloDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<ICollection<UsuarioDTO>>> IUsuarioService.GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService<Usuario>> IUsuarioService.GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService> IUsuarioService.UpdateAsync(UsuarioDTO tituloDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ResultService> IUsuarioService.DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

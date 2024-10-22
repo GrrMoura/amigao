@@ -32,5 +32,5 @@ namespace AmigaoAPI.Infra.Data.Context
 
 
         }
- 
+    }
 }
